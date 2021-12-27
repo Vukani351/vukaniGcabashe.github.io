@@ -15,3 +15,58 @@
     border: 1px solid rgb(14, 93, 14);
     margin-right: 10px;
 }
+.main {
+    background: url(./assets/bg1.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-left: -10px;
+    padding-right: -10px;
+    
+}
+
+.learning-div{
+    background: rgba(1, 48, 87, 0.226);
+    color: #fff;
+    text-align: start;
+}
+
+.into-div{
+    background-color: rgba(12, 117, 236, 0.308);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+       
+}
+
+.projects-div{
+    background-color:rgba(1, 48, 87, 0.226);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+     
+}
+
+#div-heading{
+    color: white;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.projects_li{
+    color: rgba(84, 84, 245, 0.849);
+    font-size: large;
+    font-family: georgia;
+    font-weight: 600;
+}
+
+.learnin_li{
+    font-size: large;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+#learning_small{
+    color: rgba(93, 112, 102, 0.877); 
+    padding-left: 7px;
+    font-style: oblique;
+    font-size: small;
+}

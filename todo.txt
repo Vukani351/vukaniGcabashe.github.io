@@ -1,0 +1,13 @@
+1.  i have to put pop up with content onto each learning link. 
+    pop up will explain how it went, when it started and how it help me get good and how one can make use with it.
+
+2. describe internship and how it has to benefit you and how best you can prep for one, meet one, handle one, and go on from there.
+
+3. Tutoring - good or bad, how it pays and how best can you use it as a learning curve.
+
+4. sololearn, codewars, freecode camp - after internship these websites got value for me and also realised something important about their content and how you should use it to your advantage.
+
+5. Create the po up component to have the text part of it the p to be component or dynamic - this way if pull the modal its text will change with each click
+using innerHtml or textContent.
+
+6. make the back ground image to be less in your face.
