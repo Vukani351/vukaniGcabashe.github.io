@@ -54,7 +54,7 @@
 
 .projects_li{
     color: rgba(84, 84, 245, 0.849);
-    font-size: large;
+    font-size:  large;
     font-family: georgia;
     font-weight: 600;
 }
@@ -64,9 +64,49 @@
     font-weight: 700;
     font-family: sans-serif;
 }
+
 #learning_small{
     color: rgba(93, 112, 102, 0.877); 
     padding-left: 7px;
     font-style: oblique;
     font-size: small;
 }
+
+/* styles for the university blog component */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+}
+
+.display-4 {
+    font-size: 2.5rem;
+}
+.blog-post {
+    margin-bottom: 4rem;
+}
+.blog-post-title {
+    margin-bottom: .25rem;
+    font-size: 2.5rem;
+}
+.blog-post-meta {
+    margin-bottom: 1.25rem;
+    color: #727272;
+}
+
+.alert_h{
+    font-weight: 500;
+    border-bottom: 1px solid gray;
+}
+ small{
+     -webkit-flow-into: small;
+     font-weight: 300;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+ .para{
+     background-color: rgba(3, 18, 46, 0.429);
+     font-family: "Times New Roman";
+     font-size: large;
+     color: white;
+     padding: 7px;
+ }
+/* Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman */
