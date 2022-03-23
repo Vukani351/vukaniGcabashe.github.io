@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Profile</title>
+        <link rel="stylesheet" href="/styles2.css">
+        <script src="/index.js"></script>
+        <link rel="stylesheet" href="./node_modules/animate.css/animate.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vukani_G</title>
+        <!-- <link rel="stylesheet" href="./bootstrap/bootstrap.min.css"> -->
+        <link rel="stylesheet" href="./styles.css">
+
+        <script>
+            var isOpen = false;
+            function home() {
+                const section1 = document.querySelectorAll('#main0')[0];
+                section1.classList.add('animate__backOutLeft');
+                section2 = document.querySelectorAll('#main1')[0];
+
+                section2.style.display = 'block';
+                section2.classList.add('animated', 'animate__backInRight', 'open');
+                // console.log(section1.classList.toString())
+                // if(!isOpen){
+                //     section1.classList.addd('animated', 'fadeInOut', 'open'),
+                //     section2.classList.remove('animated', 'fadeInLeft', 'open');
+                // }
+            }
+
+            function experience() {
+                const section1 = document.querySelectorAll('#main1')[0];
+                section1.classList.add('animate__backOutLeft');
+                section2 = document.querySelectorAll('#main2')[0];
+
+                section2.style.display = 'block';
+                section2.classList.add('animated', 'animate__backInRight', 'open');
+            }
+
+            function skills() {
+                const section1 = document.querySelectorAll('#main2')[0];
+                section1.classList.add('animate__backOutLeft');
+                section2 = document.querySelectorAll('#main3')[0];
+
+                section2.style.display = 'block';
+                section2.classList.add('animated', 'animate__backInRight', 'open');
+            }
+
+            function interests() {
+                const section1 = document.querySelectorAll('#main3')[0];
+                section1.classList.add('animate__backOutLeft');
+                section2 = document.querySelectorAll('#main4')[0];
+
+                section2.style.display = 'block';
+                section2.classList.add('animated', 'animate__backInRight', 'open');
+            }
+            // function skills() {
+            //     const section1 = document.querySelectorAll('#main3')[0];
+            //     section1.classList.add('animate__backOutLeft');
+            //     section2 = document.querySelectorAll('#main4')[0];
+
+            //     section2.style.display = 'block';
+            //     section2.classList.add('animated', 'animate__backInRight', 'open');
+            // }
+        </script>
+    </head>
+
+    <body style="display: flex;">
+        <nav class="navbar" >
+            <img class="logo" src="/assets/ViQi-logo.png" alt="logo">
+            <ul class="navbar-nav" style="align-content: start;">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <img src="./assets/happy.webp" alt="icon" style="width: 50px;height:50px; border-radius: 60%; border: 2px green solid;">
+                        <span class="link-text" onclick="home()">Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <img src="./assets/idea_icon.png" alt="icon" style="width: 50px;height:50px; border-radius: 60%; border: 2px green solid;">
+                        <span class="link-text" onclick="experience()">Experience</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <img src="./assets/intern1.jfif" alt="icon" style="width: 50px;height:50px; border-radius: 60%; border: 2px green solid;">
+                        <span class="link-text" onclick="skills()">Skills</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <img src="./assets/concerned.webp" alt="icon" style="width: 50px;height:50px; border-radius: 60%; border: 2px green solid;">
+                        <span class="link-text" onclick="interests()">Interests</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <span id="top_line">
+            <img src="./assets//images_24.jpg" class = "me" alt="" style="width: 100px; height: 100px;">
+        </span>
+        <div>
+            <main id="main0" class="animate__animated">
+                <header class="pb-3 mb-4 border-bottom">
+                    <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+                      <span class="fs-2 h3" style="color: rgb(131, 87, 87); font-size: large; font-family: Verdana;">You love code or need a code buddy? Well I got your back</span>
+                    </a>
+                  </header>
+              
+                  <div class="px-5 mb-4 into-div border rounded-3">
+                    <div class="container-fluid py-5">
+                      <h1 class="display-5 fw-bold">I am Vukani Gcabashe</h1>
+                      <p class="col-md-8 fs-4">Vukani is a enthusiastic, curious and active Junior Dev with a love of coding solution, I am detail oriented, love learning new things and solutions and using proven and working patterns to get the job done.</p>
+                      <p class="col-md-8 fs-4 py-2">Mostly self taught but leme share my journey with you</p>
+                      
+                    </div>
+                  </div>
+            </main>
+            <main id="main1" class="animate__animated" style="display:none">
+                <h1>This Is Home Stuff... </h1>
+                <p>
+                    laConsequat esse voluptate veniam tempor ad. Ipsum ipsum esse anim dolor reprehenderit. Ullamco cillum Lorem veniam ea exercitation sunt veniam id non. Reprehenderit cupidatat anim ea culpa aliqua ea irure ipsum est labore ad tempor est.
+
+                    Deserunt elit quis ad ea commodo elit quis nostrud ea anim commodo tempor cupidatat non. Aute fugiat in consectetur anim culpa qui. Est cillum officia pariatur sit culpa anim pariatur consectetur est ea nostrud sit sunt.
+                </p>
+            </main>
+            <main id="main2" class="animate__animated" style="display:none">
+                <h1>This Is Experience Stuff... </h1>
+                <p>
+                    laConsequat esse voluptate veniam tempor ad. Ipsum ipsum esse anim dolor reprehenderit. Ullamco cillum Lorem veniam ea exercitation sunt veniam id non. Reprehenderit cupidatat anim ea culpa aliqua ea irure ipsum est labore ad tempor est.
+
+                    Deserunt elit quis ad ea commodo elit quis nostrud ea anim commodo tempor cupidatat non. Aute fugiat in consectetur anim culpa qui. Est cillum officia pariatur sit culpa anim pariatur consectetur est ea nostrud sit sunt.
+                </p>
+            </main>
+            <main id="main3" class="animate__animated" style="display:none">
+                <h1>This Is Skills Stuff... </h1>
+                <p>
+                    laConsequat esse voluptate veniam tempor ad. Ipsum ipsum esse anim dolor reprehenderit. Ullamco cillum Lorem veniam ea exercitation sunt veniam id non. Reprehenderit cupidatat anim ea culpa aliqua ea irure ipsum est labore ad tempor est.
+
+                    Deserunt elit quis ad ea commodo elit quis nostrud ea anim commodo tempor cupidatat non. Aute fugiat in consectetur anim culpa qui. Est cillum officia pariatur sit culpa anim pariatur consectetur est ea nostrud sit sunt.
+                </p>
+            </main> 
+            <main id="main4" class="animate__animated" style="display:none">
+                <h1>This Is Interests Stuff... </h1>
+                <p>
+                    laConsequat esse voluptate veniam tempor ad. Ipsum ipsum esse anim dolor reprehenderit. Ullamco cillum Lorem veniam ea exercitation sunt veniam id non. Reprehenderit cupidatat anim ea culpa aliqua ea irure ipsum est labore ad tempor est.
+
+                    Deserunt elit quis ad ea commodo elit quis nostrud ea anim commodo tempor cupidatat non. Aute fugiat in consectetur anim culpa qui. Est cillum officia pariatur sit culpa anim pariatur consectetur est ea nostrud sit sunt.
+                </p>
+            </main>
+        </div>
+    </body>
+</html>
