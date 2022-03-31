@@ -11,3 +11,65 @@
 using innerHtml or textContent.
 
 6. make the back ground image to be less in your face.
+
+
+Intro:
+    Do you want to learn basic programming? 
+    Do you have an issue using what you have learnt to make projects or design them better?
+    I can show you what you need to actually get prepaired for a good job, i will also share which 
+    road map is best for your growth focusing on building your career and your attractive profile.
+
+Body:
+    Personal Portfolio:
+        Hi there,
+        A your looking for someone to work with on a web project? 
+        Do you need someone tio maintain your angular project with ionic native functionality?
+        Do you wish to make an addition to your team with a vibrant UI /UX developer?
+        check out my skills and what i can offer.
+
+    
+    skills:
+        Javascript + HTML5 + CSS3 - Basic Web 
+        Reactjs + Angular - Frameworks
+        Ionic - Mobile app
+        Node - Express - API
+        Bootstrap + Tailwindcss + Animatecss - Styling
+        Python + C++ + C# - Learnt but not used
+    
+    Experience:
+        Gibon Dev
+        Programming Kings
+        Unizulu
+        Alphagamo
+
+    Interest
+        C# + SQL
+        Svelt
+        Nextjs
+        vue 
+        D3 + ChartJs + CubeJs
+
+
+
+    Project Portfolio:
+        1. google maps project.
+        2. shopping website { for services }
+        3. hair cut mobile app 
+        4. hair cut back office app.
+        5. token distributor app.
+        6. artists | photographer | singer | drawer website
+
+Outro
+    Fun 
+    Blog Posts:
+    1. This is how learning to learn is important to be a good coder.
+    2. Here we discuss how the importance of learning fundamentals deeply.
+    3. How to set goals for learning and push yourself to it.
+    4. Which are the important points to be a good intern.
+    
+    Video Posts:
+    1. How to enjoy your learning process using inbuilt docs.
+    2. See how to implement iframes in your website to show gif of your project.
+    3. using the chrome browser to check if your css styles will work 
+    4. using DOM to check if you can apply js on your pge corretly.
+    

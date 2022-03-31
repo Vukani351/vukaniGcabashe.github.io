@@ -8,12 +8,22 @@
     --transition-speed: 280ms
 }
 
+
 body{
     color: #141418;
     background-color: white;
     margin: 0;
     padding: 0;
     display: grid;
+
+    /* from the bootstrap work */
+    background: url(./assets/bg1.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-left: -10px;
+    padding-right: -10px;
 }
 body::-webkit-scrollbar {
     width: 0.25rem;
@@ -23,12 +33,26 @@ body::-webkit-scrollbar {
 }
 
 main{
-    margin-left: 1.5rem;
+    margin-left: 0.2%;
     padding: 1rem;
     width: 70%;
     display: block;
     position: absolute;
     top: 100px;
+
+    /* add font seettings */
+    
+    margin-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: x-large;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.main_header {
+    font-size: larger;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
 }
 
 .navbar {
@@ -109,6 +133,50 @@ main{
     display: block;
 }
 
+.p{
+    font-size: large;
+    text-align: justify;
+}
+
+.into-div{
+    background-color: rgb(12 117 236 / 13%);
+    color: white;
+    font-family: 'Gill Sans';
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: large;
+}
+
+.skills_container{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    flex-direction: row;
+
+    
+}
+
+.square {
+    padding: 10px;
+    height: 360px;
+    width: 98%;
+    background-color: #6e87c299;
+    border-radius: 5%;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .option {
+    padding: 2px 16px;
+  }
 
 @media only screen and (max-width:600px) {
     body{

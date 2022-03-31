@@ -1,128 +1,228 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Profile</title>
+        <link rel="stylesheet" href="/styles2.css">
+        <script src="/index.js"></script>
+        <link rel="stylesheet" href="./node_modules/animate.css/animate.css">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Vukani_G</title>
-        <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="./bootstrap/bootstrap.min.css"> -->
         <link rel="stylesheet" href="./styles.css">
-        <script src="./bootstrap/bootstrap.bundle.min.js"></script>
-        <script src="./index.js"></script>
-        
         <style>
-            .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-            }
-    
-            @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
+            
+            .square {
+                height: 500px;
+                width: 500px;
+                background-color: #555;
+                border-radius: 5%;
             }
         </style>
-  
+        <script>
+            var isOpen = false;
+            //We need a way to see which one of the menue items is opened
+            // 1. link the name of the item clicked == the name of the id
+            // 2. we can try to create object holding the state of the menue items.
+
+
+            function home() {
+                const section1 = document.querySelectorAll('#main0')[0];
+                section1.classList.add('animate__backOutLeft');
+                section2 = document.querySelectorAll('#main1')[0];
+
+                section2.style.display = 'block';
+                section2.classList.add('animated', 'animate__backInRight', 'open');
+                // console.log(section1.classList.toString())
+                // if(!isOpen){
+                //     section1.classList.addd('animated', 'fadeInOut', 'open'),
+                //     section2.classList.remove('animated', 'fadeInLeft', 'open');
+                // }
+            }
+
+            function experience() {
+                const section1 = document.querySelectorAll('#main1')[0];
+                section1.classList.add('animate__backOutLeft');
+                section2 = document.querySelectorAll('#main2')[0];
+
+                section2.style.display = 'block';
+                section2.classList.add('animated', 'animate__backInRight', 'open');
+            }
+
+            function skills() {
+                const section1 = document.querySelectorAll('#main2')[0];
+                section1.classList.add('animate__backOutLeft');
+                section2 = document.querySelectorAll('#main3')[0];
+
+                section2.style.display = 'block';
+                section2.classList.add('animated', 'animate__backInRight', 'open');
+            }
+
+            function interests() {
+                const section1 = document.querySelectorAll('#main3')[0];
+                section1.classList.add('animate__backOutLeft');
+                section2 = document.querySelectorAll('#main4')[0];
+
+                section2.style.display = 'block';
+                section2.classList.add('animated', 'animate__backInRight', 'open');
+            }
+            // function skills() {
+            //     const section1 = document.querySelectorAll('#main3')[0];
+            //     section1.classList.add('animate__backOutLeft');
+            //     section2 = document.querySelectorAll('#main4')[0];
+
+            //     section2.style.display = 'block';
+            //     section2.classList.add('animated', 'animate__backInRight', 'open');
+            // }
+        </script>
     </head>
-    <body>
-           
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-1">
-          <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link  " aria-current="page" href="#">projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link  " aria-current="page" href="#">Learning</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link  " aria-current="page" href="#">Interests</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                    </li> -->
-                </ul>
-                <div class="d-flex">
-                    <img src="./assets//images_24.jpg" alt="profile" class="profile_imgs">
-                </div>
-            </div>
-          </div>
-      </nav>
-      <div class="main">
-          <div class="container py-2">
-              <header class="pb-3 mb-4 border-bottom">
-                <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-                  <img src="./assets/images_10.jpg" alt="sgv" class="sgv_icon">
-                  <span class="fs-2 h3" style="color: white; font-size: large; font-family: Verdana;">You love code or need a code buddy? Well I got your back</span>
-                </a>
-              </header>
-          
-              <div class="px-5 mb-4 into-div border rounded-3">
-                <div class="container-fluid py-5">
-                  <h1 class="display-5 fw-bold">I am Vukani Gcabashe</h1>
-                  <p class="col-md-8 fs-4">Vukani is a enthusiastic, curious and active Junior Dev with a love of coding solution, I am detail oriented, love learning new things and solutions and using proven and working patterns to get the job done.</p>
-                  <p class="col-md-8 fs-4 py-2">Mostly self taught but leme share my journey with you</p>
-                  
-                </div>
-              </div>
-          
-              <div class="row align-items-md-stretch">
-                <div class="col-md-6 ">
-                  <div class="h-100 p-5 text-white learning-div border rounded-3">
-                    <h2 class="div-heading">My Learning Journey</h2>
-                    <ul class="learning_list">
-                      <li class="learnin_li"><a href="./university.html">University</a> <small id="learning_small"> Door hiding opportunities.</small><img src="" alt="" srcset=""></li>
-                      <li class="learnin_li"><a href="./intern.html">Worked an internship</a> <small id="learning_small"> How to handle the challenging</small><img src="" alt="" srcset=""></li>
-                      <li class="learnin_li"><a href="./tutor.html">Tutor other students</a> <small id="learning_small"> Helping others is helping others is helping yourself</small><img src="" alt="" srcset=""></li>
-                      <li class="learnin_li"><a href="./online_courses.html">Online Courses</a> <small id="learning_small"> paying for understanding can be the safest investment</small><img src="" alt="" srcset=""></li>
-                      <li class="learnin_li"><a href="./games.html">Games</a> <small id="learning_small"> Coding can be fun and used as a game to grow the skills</small><img src="" alt="" srcset=""></li>
-                      <li class="learnin_li"><a href="#">Structured Learning</a> <small id="learning_small"> A site with tutorials with realistic skills to offer.</small><img src="" alt="" srcset=""></li>
-                    </ul>
-                      
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="h-100 p-5 border rounded-3 projects-div">
-                    <h2 class="div-heading">Projects</h2>
-                    <p class="project_ptag">I do have projects that i have worked on personally. You welcome to check them out</p>
-                    <div>
-                      <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                        <li class="nav-item projects_li">
-                            <a class="nav-link active" aria-current="page" href="#">Using google maps to locate businesses</a>
-                        </li>
-                        <li class="nav-item projects_li">
-                            <a class="nav-link  " aria-current="page" href="#">Club token app with crypto</a>
-                        </li>
-                        <li class="nav-item projects_li">
-                            <a class="nav-link " aria-current="page" href="#">Documenter to help you create whats on Docs</a>
-                        </li>
-                        <li class="nav-item projects_li">
-                            <a class="nav-link  " aria-current="page" href="#">Indexer for finding services</a>
-                        </li>
-                    </ul>
+
+    <body style="display: flex;">
+        <nav class="navbar" >
+            <img class="logo" src="/assets/ViQi-logo.png" alt="logo">
+            <ul class="navbar-nav" style="align-content: start;">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <img src="./assets/happy.webp" alt="icon" style="width: 50px;height:50px; border-radius: 60%; border: 2px green solid;">
+                        <span class="link-text" onclick="home()">Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <img src="./assets/idea_icon.png" alt="icon" style="width: 50px;height:50px; border-radius: 60%; border: 2px green solid;">
+                        <span class="link-text" onclick="experience()">Experience</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <img src="./assets/intern1.jfif" alt="icon" style="width: 50px;height:50px; border-radius: 60%; border: 2px green solid;">
+                        <span class="link-text" onclick="skills()">Skills</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <img src="./assets/concerned.webp" alt="icon" style="width: 50px;height:50px; border-radius: 60%; border: 2px green solid;">
+                        <span class="link-text" onclick="interests()">Interests</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <span id="top_line">
+            <img src="./assets//images_24.jpg" class = "me" alt="" style="width: 100px; height: 100px;">
+        </span>
+        <div>
+            <main id="main0" class="animate__animated">
+
+                <div class="px-5 mb-4 into-div">
+                    <h1 >Hi There,</h1>
+                    <div class="">
+                        <!-- <div class="square"> -->
+                        <h2 style="text-align: start;">Do you want to learn basic programming? 
+                            Do you have an issue using what you have learnt to make projects or design them better? <img src="./assets/happy.webp" alt="happy" style="width: 25px; margin-top: 10px; border-radius: 60%;">
+                        </h2>
+                        
+                        <h2 style="font-family:Arial, Helvetica">
+                            A your looking for someone to work with on a web project? 
+                            Do you need someone tio maintain your angular project with ionic native functionality?
+                            Do you wish to make an addition to your team with a vibrant UI /UX developer?
+                            check out my skills and what i can offer.
+                        </h2>
                     </div>
-                  </div>
+                </div> 
+            </main>
+            <main id="main1" class="animate__animated" style="display:none; font-size: large;">
+                
+                <div class="px-5 mb-4 into-div" style="display: block; width: 90%;">
+                        <h1>skills </h1>
+                        <div class="skills_container">
+                            <div class="card">
+                                <p>Basic Web</p>
+                                <ol>
+                                    <li>Javascript</li>
+                                    <li>HTML5</li>
+                                    <li>CSS3</li>
+                                </ol>
+                            </div>
+                            <div class="card">
+                                <p>Frameworks</p>
+                                <ol>
+                                    <li>Reactjs</li>
+                                    <li>Angular</li>
+                                    <li>Frameworks</li>
+                                </ol>
+                            </div>
+                            <div class="card">
+                                <p>Styling</p>
+                                <ol>
+                                    <li>Animatecss</li>
+                                    <li>Tailwindcss</li>
+                                    <li>Bootstrap</li>
+                                </ol>
+                            </div>
+                            <div class="card">
+                                <p>Mobile app</p>
+                                <p>Ionic</p>
+                            </div>
+                            <div class="card">
+                                <p>API</p>
+                                <ol>
+                                    <li>Node</li>
+                                    <li>Express</li>
+                                </ol>
+                            </div>
+                            <div class="card">
+                                <p>Learnt but not used</p>
+                                <ol>
+                                    <li>Python</li>
+                                    <li>C++</li>
+                                    <li>C#</li>
+                                </ol>
+                            </div>
+                        </div>
+                        
+                        </div>
+                        
+            </main>
+            <main id="main2" class="animate__animated" style="display:none">
+                <div class="px-5 mb-4 into-div" style="display: block; width: 90%;">
+                    <p>Experience </p>
+                    <ol>
+                        <li>Gibon Dev</li>
+                        <li>Programming Kings</li>
+                        <li>Unizulu</li>
+                        <li>Alphagamo</li>
+                    </ol>
                 </div>
-              </div>
-              
-              <footer class="pt-3 mt-4 text-muted border-top">
-                &copy; 2021
-              </footer>
-          </div>
-      </div>
-  
+            </main>
+            <main id="main3" class="animate__animated" style="display:none">
+                <div class="px-5 mb-4 into-div" style="display: block; width: 90%;">
+                    <h1>Skills </h1>
+                
+                    <ol>
+                        <li>C# + SQL </li>
+                        <li>Svelt</li>   
+                        <li>Nextjs</li>    
+                        <li>Vue</li>     
+                        <li>D3 + ChartJs + CubeJs</li>    
+                        
+                    </ol>
+                </div>
+                
+            </main> 
+            <main id="main4" class="animate__animated" style="display:none">
+                <div class="px-5 mb-4 into-div" style="display: block; width: 90%;">
+                    <p> Project Portfolio</p>
+                    <ol>
+                        <li>google maps project.</li>
+                        <li>shopping website { for services }</li>
+                        <li>hair cut mobile app</li>
+                        <li>hair cut back office app.</li>
+                        <li> token distributor app.</li>
+                        <li>artists | photographer | singer | drawer website</li>
+                    </ol>
+                </div>
+                
+            </main>
+        </div>
     </body>
-    <footer></footer>
 </html>
