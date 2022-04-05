@@ -21,12 +21,40 @@
         </style>
         <script>
             var isOpen = false;
+            menue = { home: true, experience: false, skills: false, }
             //We need a way to see which one of the menue items is opened
             // 1. link the name of the item clicked == the name of the id
             // 2. we can try to create object holding the state of the menue items.
 
+            navItems = {Home: true, Experience: false, Skills: false, Interests: false, interests: false };
+            clickedItem = 'Home';
+
+
+            function ChangeDisplay(itemClicked){
+                switch(itemClicked){
+                    // case 'Home': {
+                    //     console.log(document.getElementById('main0'));
+                    // }
+                    // case 'Experience':{
+                    //     console.log(document.getElementById('main1'));
+                    // }
+                    case 'Skills':{
+                        console.log(document.getElementById('main2'));
+                    }
+                    case 'Interests':{
+                        console.log(document.getElementById('main3'));
+                    }
+                }
+
+            }
+
+            function navClick(item){
+                console.log(item)
+                // console.log(item === navItems.Home)
+            }
 
             function home() {
+                ChangeDisplay('Home');
                 const section1 = document.querySelectorAll('#main0')[0];
                 section1.classList.add('animate__backOutLeft');
                 section2 = document.querySelectorAll('#main1')[0];
@@ -40,7 +68,9 @@
                 // }
             }
 
+
             function experience() {
+                ChangeDisplay('Experience');
                 const section1 = document.querySelectorAll('#main1')[0];
                 section1.classList.add('animate__backOutLeft');
                 section2 = document.querySelectorAll('#main2')[0];
@@ -50,6 +80,7 @@
             }
 
             function skills() {
+                ChangeDisplay('Skills');
                 const section1 = document.querySelectorAll('#main2')[0];
                 section1.classList.add('animate__backOutLeft');
                 section2 = document.querySelectorAll('#main3')[0];
@@ -59,6 +90,7 @@
             }
 
             function interests() {
+                ChangeDisplay('Interests');
                 const section1 = document.querySelectorAll('#main3')[0];
                 section1.classList.add('animate__backOutLeft');
                 section2 = document.querySelectorAll('#main4')[0];
@@ -130,56 +162,123 @@
                     </div>
                 </div> 
             </main>
-            <main id="main1" class="animate__animated" style="display:none; font-size: large;">
+            <main id="main1" class="animate__animated" style="display:none; font-size: large; top: 10px;">
                 
-                <div class="px-5 mb-4 into-div" style="display: block; width: 90%;">
-                        <h1>skills </h1>
+                <div class="px-5 mb-4 intro-div" style="display: block; width: 90%;">
+                        <h1>Skills </h1>
                         <div class="skills_container">
-                            <div class="card">
-                                <p>Basic Web</p>
-                                <ol>
-                                    <li>Javascript</li>
-                                    <li>HTML5</li>
-                                    <li>CSS3</li>
-                                </ol>
+                            <div class="first-row" style="display: flex; margin-left: -3.7rem;">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front card">
+                                            <div class="">
+                                                <h1 style="text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;">Basic Web</h1>                                          
+                                            </div>
+                                        </div>
+                                        <div class="flip-card-back card">
+                                            <div class="">
+                                                <ol style="font-size: large; font-family: Verdana, Geneva,">
+                                                    <li>Javascript</li>
+                                                    <li>HTML5</li>
+                                                    <li>CSS3</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front card">
+                                            <div class="">
+                                                <h1 style="text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;">Frameworks</h1>                                          
+                                            </div>
+                                        </div>
+                                        <div class="flip-card-back card">
+                                            <div class="">
+                                                <ol style="font-size: large; font-family: Verdana, Geneva,">
+                                                    <li>Reactjs</li>
+                                                    <li>Angular</li>
+                                                    <li>Frameworks</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="card">
-                                <p>Frameworks</p>
-                                <ol>
-                                    <li>Reactjs</li>
-                                    <li>Angular</li>
-                                    <li>Frameworks</li>
-                                </ol>
-                            </div>
-                            <div class="card">
-                                <p>Styling</p>
-                                <ol>
-                                    <li>Animatecss</li>
-                                    <li>Tailwindcss</li>
-                                    <li>Bootstrap</li>
-                                </ol>
-                            </div>
-                            <div class="card">
-                                <p>Mobile app</p>
-                                <p>Ionic</p>
-                            </div>
-                            <div class="card">
-                                <p>API</p>
-                                <ol>
-                                    <li>Node</li>
-                                    <li>Express</li>
-                                </ol>
-                            </div>
-                            <div class="card">
-                                <p>Learnt but not used</p>
-                                <ol>
-                                    <li>Python</li>
-                                    <li>C++</li>
-                                    <li>C#</li>
-                                </ol>
-                            </div>
+                            <div class="second-row" style="display: flex; margin-left: -3.7rem;">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front card">
+                                            <div class="">
+                                                <h1 style="text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;">Styling</h1>                                          
+                                            </div>
+                                        </div>
+                                        <div class="flip-card-back card">
+                                            <div class="">
+                                                <ol style="font-size: large; font-family: Verdana, Geneva; ">
+                                                    <li>Animatecss</li>
+                                                    <li>Tailwindcss</li>
+                                                    <li>Bootstrap</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="flip-card">
+                                    <div class="flip-card-inner" style="">
+                                        <div>
+                                            <div class="flip-card-front">
+                                                <div class="card">
+                                                    <h1 style="text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;"> Mobile app </h1>                                          
+                                                </div>
+                                            </div>
+                                            <div class="flip-card-back">
+                                                <div class="card">
+                                                    <ol style="font-size: large; font-family: Verdana, Geneva,">
+                                                        Ionic
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="flip-card-front">
+                                                <div class="card">
+                                                    <h1 style="text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;"> API </h1>                                          
+                                                </div>
+                                            </div>
+                                            <div class="flip-card-back">
+                                                <div class="card">
+                                                    <ol style="font-size: large; font-family: Verdana, Geneva,">
+                                                        <li>Node</li>
+                                                        <li>Express</li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>                                   
+                                    </div>
+                                </div> -->
+    
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front card">
+                                            <div class="">
+                                                <h1 style="text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;"> Learnt <small> but not used </small> </h1>                                          
+                                            </div>
+                                        </div>
+                                        <div class="flip-card-back card">
+                                            <div class="">
+                                                <ol style="font-size: large; font-family: Verdana, Geneva,">
+                                                    <li>Python</li>
+                                                    <li>C++</li>
+                                                    <li>C#</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
                         </div>
-                        
+                                                
                         </div>
                         
             </main>
@@ -197,7 +296,6 @@
             <main id="main3" class="animate__animated" style="display:none">
                 <div class="px-5 mb-4 into-div" style="display: block; width: 90%;">
                     <h1>Skills </h1>
-                
                     <ol>
                         <li>C# + SQL </li>
                         <li>Svelt</li>   

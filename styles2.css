@@ -59,7 +59,7 @@ main{
     /* position: inherit; */
     display: block;
     background-color: var(--bg-primary);
-    transition: width 250ms ease;
+    transition: 450ms ease;
 }
 
 .me {
@@ -138,7 +138,7 @@ main{
     text-align: justify;
 }
 
-.into-div{
+.intro-div{
     background-color: rgb(12 117 236 / 13%);
     color: white;
     font-family: 'Gill Sans';
@@ -148,10 +148,10 @@ main{
 }
 
 .skills_container{
-    display: flex;
-    align-items: center;
-    width: 80%;
-    flex-direction: row;
+    display: grid;
+    /* align-items: start; */
+    width: 10rem;
+    flex-direction: column;
 
     
 }
@@ -164,19 +164,73 @@ main{
     border-radius: 5%;
   }
 
-  .card {
+.card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    width: 40%;
-  }
-  
-  .card:hover {
+    transition: 0.8s;
+    width: 10rem;
+    height: 200px;
+    /* padding-left: 2rem;
+    padding-right: 2rem;
+    margin-right: 5rem;
+    margin-left: 5rem; */
+}
+
+.card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-  
-  .option {
+}
+
+.option {
     padding: 2px 16px;
-  }
+}
+
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 270px;
+    perspective: 1000px;
+    margin-top: 10px;
+    margin-left: 60px;
+
+}
+  
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 40%;
+    text-align: start;
+    transition: transform 0.9s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    
+}
+  
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+  
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+  
+.flip-card-front {
+    background-color: #2941687d;
+    color: black;
+    border: -0.3px solid #071016;
+    
+}
+  
+.flip-card-back {
+    width: 50%;
+    background-color:  #3e5693;
+    color: white;
+    transform: rotateY(180deg);
+    opacity: 70%;
+}
 
 @media only screen and (max-width:600px) {
     body{
