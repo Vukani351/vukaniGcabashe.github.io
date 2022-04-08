@@ -6,12 +6,23 @@
         <script src="/index.js"></script>
         <link rel="stylesheet" href="./node_modules/animate.css/animate.css">
         <meta charset="utf-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Vukani_G</title>
         <!-- <link rel="stylesheet" href="./bootstrap/bootstrap.min.css"> -->
         <link rel="stylesheet" href="./styles.css">
         <style>
-            
+            .active{
+                border-bottom: 3px solid green;
+            }
+
+            .nav_img{
+                width: 50px;
+                height:50px; 
+                border-radius: 60%; 
+                border: 2px rgb(26, 0, 128) solid
+            }
+
             .square {
                 height: 500px;
                 width: 500px;
@@ -20,58 +31,68 @@
             }
         </style>
         <script>
-            var isOpen = false;
             menue = { home: true, experience: false, skills: false, }
             //We need a way to see which one of the menue items is opened
             // 1. link the name of the item clicked == the name of the id
             // 2. we can try to create object holding the state of the menue items.
 
-            navItems = {Home: true, Experience: false, Skills: false, Interests: false, interests: false };
+            navItems = {Home: true, Experience: false, Skills: false, Interests: false };
             clickedItem = 'Home';
 
+            /*
+            1. the click of an element.
+            2. check who was true before and make them false.
+            3. grab the element and change its state in navItems to true and then open the div.
+            
+            */
 
-            function ChangeDisplay(itemClicked){
-                switch(itemClicked){
-                    // case 'Home': {
-                    //     console.log(document.getElementById('main0'));
-                    // }
-                    // case 'Experience':{
-                    //     console.log(document.getElementById('main1'));
-                    // }
-                    case 'Skills':{
-                        console.log(document.getElementById('main2'));
-                    }
-                    case 'Interests':{
-                        console.log(document.getElementById('main3'));
-                    }
+            navState = 'Home'; 
+           function ChangeDisplay(itemClicked){
+               console.log(this.navState)
+                if( itemClicked === 'Home') {
+                    document.querySelectorAll('.nav-link')[0].classList.remove('active');
+                    document.querySelectorAll('.nav_img')[1].classList.add('animate__bounce', 'active');
+                    document.querySelectorAll('.nav-link')[1].classList.add('active');
+                    // document.querySelectorAll('.nav_img')[1].classList.add('animate__bounce', 'active');  
+                } 
+                else if(itemClicked === 'Experience'){  
+                    document.querySelectorAll('.nav-link')[0].classList.remove('active');
+                    document.querySelectorAll('.nav_img')[1].classList.add('animate__bounce', 'active');
+                    document.querySelectorAll('.nav-link')[1].classList.add('active');
                 }
-
+                else if(itemClicked === 'Skills'){
+                    document.querySelectorAll('.nav-link')[1].classList.remove('active');
+                    document.querySelectorAll('.nav_img')[2].classList.add('animate__bounce', 'active');
+                    document.querySelectorAll('.nav-link')[2].classList.add('active');
+                
+                }
+                else if(itemClicked === 'Interests'){
+                    document.querySelectorAll('.nav-link')[2].classList.remove('active');
+                    document.querySelectorAll('.nav_img')[3].classList.add('animate__bounce', 'active');
+                    document.querySelectorAll('.nav-link')[3].classList.add('active');
+                
+                }
             }
-
-            function navClick(item){
-                console.log(item)
-                // console.log(item === navItems.Home)
-            }
+                      
 
             function home() {
                 ChangeDisplay('Home');
                 const section1 = document.querySelectorAll('#main0')[0];
+                
                 section1.classList.add('animate__backOutLeft');
                 section2 = document.querySelectorAll('#main1')[0];
 
                 section2.style.display = 'block';
                 section2.classList.add('animated', 'animate__backInRight', 'open');
-                // console.log(section1.classList.toString())
                 // if(!isOpen){
                 //     section1.classList.addd('animated', 'fadeInOut', 'open'),
                 //     section2.classList.remove('animated', 'fadeInLeft', 'open');
                 // }
             }
 
-
             function experience() {
                 ChangeDisplay('Experience');
-                const section1 = document.querySelectorAll('#main1')[0];
+                const section1 = document.querySelectorAll('#main0')[0];
                 section1.classList.add('animate__backOutLeft');
                 section2 = document.querySelectorAll('#main2')[0];
 
@@ -98,14 +119,7 @@
                 section2.style.display = 'block';
                 section2.classList.add('animated', 'animate__backInRight', 'open');
             }
-            // function skills() {
-            //     const section1 = document.querySelectorAll('#main3')[0];
-            //     section1.classList.add('animate__backOutLeft');
-            //     section2 = document.querySelectorAll('#main4')[0];
-
-            //     section2.style.display = 'block';
-            //     section2.classList.add('animated', 'animate__backInRight', 'open');
-            // }
+            
         </script>
     </head>
 
@@ -114,26 +128,26 @@
             <img class="logo" src="/assets/ViQi-logo.png" alt="logo">
             <ul class="navbar-nav" style="align-content: start;">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <img src="./assets/happy.webp" alt="icon" style="width: 50px;height:50px; border-radius: 60%; border: 2px green solid;">
+                    <a href="#" class="nav-link active">
+                        <img src="./assets/i1.png" alt="icon" class="nav_img animate__animated animate__bounce">
                         <span class="link-text" onclick="home()">Home</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <img src="./assets/idea_icon.png" alt="icon" style="width: 50px;height:50px; border-radius: 60%; border: 2px green solid;">
+                        <img src="./assets/i2.jpg" alt="icon" class="nav_img animate__animated">
                         <span class="link-text" onclick="experience()">Experience</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <img src="./assets/intern1.jfif" alt="icon" style="width: 50px;height:50px; border-radius: 60%; border: 2px green solid;">
+                        <img src="./assets/i5.jpg" alt="icon" class="nav_img animate__animated">
                         <span class="link-text" onclick="skills()">Skills</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <img src="./assets/concerned.webp" alt="icon" style="width: 50px;height:50px; border-radius: 60%; border: 2px green solid;">
+                        <img src="./assets/i55.jpg" alt="icon" class="nav_img animate__animated">
                         <span class="link-text" onclick="interests()">Interests</span>
                     </a>
                 </li>
@@ -144,25 +158,20 @@
         </span>
         <div>
             <main id="main0" class="animate__animated">
-
                 <div class="px-5 mb-4 into-div">
                     <h1 >Hi There,</h1>
-                    <div class="">
-                        <!-- <div class="square"> -->
-                        <h2 style="text-align: start;">Do you want to learn basic programming? 
-                            Do you have an issue using what you have learnt to make projects or design them better? <img src="./assets/happy.webp" alt="happy" style="width: 25px; margin-top: 10px; border-radius: 60%;">
-                        </h2>
-                        
-                        <h2 style="font-family:Arial, Helvetica">
-                            A your looking for someone to work with on a web project? 
-                            Do you need someone tio maintain your angular project with ionic native functionality?
-                            Do you wish to make an addition to your team with a vibrant UI /UX developer?
-                            check out my skills and what i can offer.
-                        </h2>
+                    <div class="" style="text-align: start;font-family:Arial, Helvetica;">
+                        <h3>Do you want to learn basic programming? </h3>
+                        <h3>Do you have an issue using what you have learnt to make projects or design them better? <img src="./assets/happy.webp" alt="happy" style="width: 25px; margin-top: 10px; border-radius: 60%;">
+                        <h3>Do you need someone tio maintain your angular project with ionic native functionality?</h3>
+                        <h3>Do you wish to make an addition to your team with a vibrant UI /UX developer?</h3>
+                        <h3>Check out my skills and what i can offer.</h3>                        
+                            
+                        </h3>
                     </div>
                 </div> 
             </main>
-            <main id="main1" class="animate__animated" style="display:none; font-size: large; top: 10px;">
+            <main id="main3" class="animate__animated" style="display:none; font-size: large; top: 10px;">
                 
                 <div class="px-5 mb-4 intro-div" style="display: block; width: 90%;">
                         <h1>Skills </h1>
@@ -293,7 +302,7 @@
                     </ol>
                 </div>
             </main>
-            <main id="main3" class="animate__animated" style="display:none">
+            <!-- <main id="main3" class="animate__animated" style="display:none">
                 <div class="px-5 mb-4 into-div" style="display: block; width: 90%;">
                     <h1>Skills </h1>
                     <ol>
@@ -306,7 +315,7 @@
                     </ol>
                 </div>
                 
-            </main> 
+            </main>  -->
             <main id="main4" class="animate__animated" style="display:none">
                 <div class="px-5 mb-4 into-div" style="display: block; width: 90%;">
                     <p> Project Portfolio</p>
