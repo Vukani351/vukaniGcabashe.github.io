@@ -37,8 +37,9 @@
             // 2. we can try to create object holding the state of the menue items.
 
             navItems = {Home: true, Experience: false, Skills: false, Interests: false };
-            clickedItem = 'Home';
-
+            
+            prevItem = 'landing';
+            // prevItem  = 'Home';
             /*
             1. the click of an element.
             2. check who was true before and make them false.
@@ -46,28 +47,63 @@
             
             */
 
-            navState = 'Home'; 
+            function NavDestory() {
+                // Bring back the home stuff and close all previous 
+                switch(this.prevItem){
+                    case 'landing':
+                        document.querySelectorAll('#main0')[0].classList.add('animate__backOutLeft');
+                        document.querySelectorAll('.nav-link')[0].classList.remove('active');
+                        break;
+                    case 'Home':
+
+                        break;
+                    case 'Experience':
+                        var section2 = document.querySelectorAll('#main2')[0];
+                        section2.classList.add('animated', 'animate__backOutLeft', 'open')
+                        section2.style.display = 'none';
+                        break;
+                    case 'Skills':
+                        var section2 = document.querySelectorAll('#main3')[0];
+                        section2.classList.add('animate__backOutLeft');
+                        // section2.style.display = 'none';
+                        break;
+                    case 'Interests':
+                        var section2 = document.querySelectorAll('#main4')[0];
+                        section2.classList.add('animate__backOutLeft');
+                        section2.style.display = 'none';
+                        break;
+                }
+            }
+
+           
            function ChangeDisplay(itemClicked){
-               console.log(this.navState)
-                if( itemClicked === 'Home') {
-                    document.querySelectorAll('.nav-link')[0].classList.remove('active');
+                if( itemClicked === 'landing    ') {
+                    NavDestory();
+                    this.prevItem = "landing";
+                   
                     document.querySelectorAll('.nav_img')[1].classList.add('animate__bounce', 'active');
                     document.querySelectorAll('.nav-link')[1].classList.add('active');
-                    // document.querySelectorAll('.nav_img')[1].classList.add('animate__bounce', 'active');  
+                    
                 } 
-                else if(itemClicked === 'Experience'){  
-                    document.querySelectorAll('.nav-link')[0].classList.remove('active');
+                else if(itemClicked === 'Experience'){
+                    // NavDestory();  
+                    this.prevItem = "Experience";
+                    // document.querySelectorAll('.nav-link')[0].classList.remove('active');
                     document.querySelectorAll('.nav_img')[1].classList.add('animate__bounce', 'active');
                     document.querySelectorAll('.nav-link')[1].classList.add('active');
                 }
                 else if(itemClicked === 'Skills'){
-                    document.querySelectorAll('.nav-link')[1].classList.remove('active');
+                    NavDestory(); 
+                    this.prevItem = "Skills";
+                    // document.querySelectorAll('.nav-link')[1].classList.remove('active');
                     document.querySelectorAll('.nav_img')[2].classList.add('animate__bounce', 'active');
                     document.querySelectorAll('.nav-link')[2].classList.add('active');
                 
                 }
                 else if(itemClicked === 'Interests'){
-                    document.querySelectorAll('.nav-link')[2].classList.remove('active');
+                    NavDestory(); 
+                    this.prevItem = 'Interests';
+                    // document.querySelectorAll('.nav-link')[2].classList.remove('active');
                     document.querySelectorAll('.nav_img')[3].classList.add('animate__bounce', 'active');
                     document.querySelectorAll('.nav-link')[3].classList.add('active');
                 
@@ -76,46 +112,30 @@
                       
 
             function home() {
-                ChangeDisplay('Home');
-                const section1 = document.querySelectorAll('#main0')[0];
-                
-                section1.classList.add('animate__backOutLeft');
+                ChangeDisplay('landing');
                 section2 = document.querySelectorAll('#main1')[0];
-
                 section2.style.display = 'block';
                 section2.classList.add('animated', 'animate__backInRight', 'open');
-                // if(!isOpen){
-                //     section1.classList.addd('animated', 'fadeInOut', 'open'),
-                //     section2.classList.remove('animated', 'fadeInLeft', 'open');
-                // }
+               
             }
 
             function experience() {
                 ChangeDisplay('Experience');
-                const section1 = document.querySelectorAll('#main0')[0];
-                section1.classList.add('animate__backOutLeft');
                 section2 = document.querySelectorAll('#main2')[0];
-
                 section2.style.display = 'block';
                 section2.classList.add('animated', 'animate__backInRight', 'open');
             }
 
             function skills() {
                 ChangeDisplay('Skills');
-                const section1 = document.querySelectorAll('#main2')[0];
-                section1.classList.add('animate__backOutLeft');
                 section2 = document.querySelectorAll('#main3')[0];
-
                 section2.style.display = 'block';
                 section2.classList.add('animated', 'animate__backInRight', 'open');
             }
 
             function interests() {
                 ChangeDisplay('Interests');
-                const section1 = document.querySelectorAll('#main3')[0];
-                section1.classList.add('animate__backOutLeft');
                 section2 = document.querySelectorAll('#main4')[0];
-
                 section2.style.display = 'block';
                 section2.classList.add('animated', 'animate__backInRight', 'open');
             }
@@ -148,7 +168,7 @@
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <img src="./assets/i55.jpg" alt="icon" class="nav_img animate__animated">
-                        <span class="link-text" onclick="interests()">Interests</span>
+                        <span class="link-text" onclick="interests()">Projects</span>
                     </a>
                 </li>
             </ul>
